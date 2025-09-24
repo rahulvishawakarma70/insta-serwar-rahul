@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🔐 Secure Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(120deg, #1f1c2c, #928DAB);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+      width: 350px;
+      border: 2px solid rgba(0, 255, 255, 0.4);
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #00fff7;
+      text-shadow: 0 0 5px #00fff7;
+    }
+    .input-group {
+      margin-bottom: 20px;
+    }
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      outline: none;
+    }
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #00fff7;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .login-btn:hover {
+      background-color: #00d6cb;
+    }
+    .error {
+      text-align: center;
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+      text-align: center;
+      text-shadow: 0 0 2px #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>🔒 Member Login</h2>
+    <form onsubmit="return handleLogin()">
+      <div class="input-group">
+        <label for="username">👤 Username</label>
+        <input type="text" id="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">🔑 Password</label>
+        <input type="password" id="password" required>
+      </div>
+      <button type="submit" class="login-btn">Login 🚀</button>
+      <div class="error" id="error-msg">❌ Invalid credentials</div>
+    </form>
+  </div>
+
+  <div class="footer">
+    🔧 Made with ❤️ by <strong>Piyush</strong>
+  </div>
+
+  <script>
+    function handleLogin() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // ✅ Set your custom login here
+      const validUser = "PIYUSHRDX560";
+      const validPass = "USER420";
+
+      if (username === validUser && password === validPass) {
+        window.location.href = "https://insta-sarwar-1.onrender.com"; // 
+      } else {
+        document.getElementById("error-msg").style.display = "block";
+      }
+
+      return false;
+    }
+  </script>
+
+</body>
+</html>
